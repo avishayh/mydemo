@@ -1,3 +1,10 @@
+resources:
+    - name: myAppRepo
+      type: GitRepo
+      configuration:
+        gitProvider: myGithub               
+        path: avishayh/mydemo                 
+  
 pipelines:
     - name: pipeline_hello_world
       configuration:
@@ -9,7 +16,7 @@ pipelines:
           type: Bash
           configuration:
             inputResources:
-              - name: avishayh/mydemo
+              - name: myAppRepo
           execution:
             onExecute:
               - echo $MY_MESSAGE
