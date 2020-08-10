@@ -9,7 +9,7 @@ pipelines:
           type: Bash
           configuration:
             inputResources:
-              - name: myAppRepo
+              - name: avishayh/mydemo
           execution:
             onExecute:
               - echo $MY_MESSAGE
