@@ -2,5 +2,5 @@ resources:
   - name: myAppRepo
     type: GitRepo
     configuration:
-      gitProvider: myGitHub #created in UI
+      gitProvider: myGitHub
       path: avishayh/mydemo
