@@ -8,11 +8,18 @@ pipelines:
       - name: build
         type: MvnBuild
         configuration:
-          sourceLocation: .
           mvnCommand: clean install
+          sourceLocation: .
           configFileLocation: .
+          configFileName: mvn-art-config
+          failOnScan: true
+          autoPublishBuildInfo: false
+          integrations:
+            - name: <artifactory integration>  # required
           inputResources:
             - name: myAppRepo
+#          outputResources:
+#            - name: <buildinfo resource>       # if autoPublishBuildInfo is true
         execution:
           onSuccess:
             - echo "Finished !!!! Yes   "
