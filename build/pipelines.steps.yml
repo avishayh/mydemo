@@ -19,6 +19,9 @@ pipelines:
           inputResources:
             - name: myAppRepo
         execution:
+          onStart:
+            - pwd
+            - find .
           onSuccess:
             - echo "Finished !!!! Yes   "
             - echo "finished $pipeline_name | $step_name on node ID $step_node_id"
