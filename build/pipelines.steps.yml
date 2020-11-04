@@ -9,9 +9,9 @@ pipelines:
         type: MvnBuild
         configuration:
           mvnCommand: clean install
-          sourceLocation: ..
-          configFileLocation: .
-          configFileName: pom.xml
+          sourceLocation: .
+          configFileLocation: build
+          configFileName: maven-config
           failOnScan: true
           autoPublishBuildInfo: false
           integrations:
