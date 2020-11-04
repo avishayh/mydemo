@@ -5,25 +5,25 @@ pipelines:
         readOnly:
           MY_MESSAGE: '"Hello World!"'
     steps:
-      - name: build
-        type: MvnBuild
-        configuration:
-          mvnCommand: clean install
-          sourceLocation: .
-          configFileLocation: .
-          configFileName: mvn-art-config
-          failOnScan: true
-          autoPublishBuildInfo: false
-          integrations:
-            - name: myArtifactory #created in UI
-          inputResources:
-            - name: myAppRepo
-        execution:
-          onSuccess:
-            - echo "Finished !!!! Yes   "
-            - echo "finished $pipeline_name | $step_name on node ID $step_node_id"
-          onFailure:
-            - echo "Maven build FAILED for $res_app_gitRepo_path at $res_app_gitRepo_gitProvider_url"
+#      - name: build
+#        type: MvnBuild
+#        configuration:
+#          mvnCommand: clean install
+#          sourceLocation: .
+#          configFileLocation: .
+#          configFileName: mvn-art-config
+#          failOnScan: true
+#          autoPublishBuildInfo: false
+#          integrations:
+#            - name: myArtifactory #created in UI
+#          inputResources:
+#            - name: myAppRepo
+#        execution:
+#          onSuccess:
+#            - echo "Finished !!!! Yes   "
+#            - echo "finished $pipeline_name | $step_name on node ID $step_node_id"
+#          onFailure:
+#            - echo "Maven build FAILED for $res_app_gitRepo_path at $res_app_gitRepo_gitProvider_url"
       - name: step_1
         type: Bash
         configuration:
