@@ -5,6 +5,20 @@ pipelines:
         readOnly:
           MY_MESSAGE: '"Hello World!"'
     steps:
+      - name: build
+          type: MvnBuild
+          configuration:
+            sourceLocation: .
+            mvnCommand: clean install
+            configFileLocation: .
+            inputResources:
+              - name: myAppRepo
+          execution:
+            onSuccess:
+              - echo "Finished !!!! Yes "
+              - echo "finished $pipeline_name | $step_name on node ID $step_node_id"
+            onFailure:
+              - echo "Maven build FAILED for $res_app_gitRepo_path at $res_app_gitRepo_gitProvider_url"
       - name: step_1
         type: Bash
         configuration:
