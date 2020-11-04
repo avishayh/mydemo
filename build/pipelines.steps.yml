@@ -42,6 +42,8 @@ pipelines:
             - echo $res_myAppRepo_resourcePath
             - echo $res_myAppRepo_gitProvider_name
             - echo $res_myAppRepo_commitSha
+            - pwd
+            - find .
 
       - name: step_2
         type: Bash
