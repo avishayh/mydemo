@@ -28,7 +28,7 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: myAppRepo
+            - name: myAppRepo3
         execution:
           onExecute:
             - echo $MY_MESSAGE
