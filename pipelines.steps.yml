@@ -15,7 +15,7 @@ pipelines:
           failOnScan: true
           autoPublishBuildInfo: false
           integrations:
-            - name: <artifactory integration>  # required
+            - name: myArtifactory #created in UI
           inputResources:
             - name: myAppRepo
 #          outputResources:
