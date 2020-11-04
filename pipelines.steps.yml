@@ -18,8 +18,6 @@ pipelines:
             - name: myArtifactory #created in UI
           inputResources:
             - name: myAppRepo
-#          outputResources:
-#            - name: <buildinfo resource>       # if autoPublishBuildInfo is true
         execution:
           onSuccess:
             - echo "Finished !!!! Yes   "
