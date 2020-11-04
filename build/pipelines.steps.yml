@@ -9,9 +9,9 @@ pipelines:
         type: MvnBuild
         configuration:
           mvnCommand: clean install
-          sourceLocation: .
+          sourceLocation: ..
           configFileLocation: .
-          configFileName: mvn-art-config
+          configFileName: pom.xml
           failOnScan: true
           autoPublishBuildInfo: false
           integrations:
