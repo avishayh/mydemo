@@ -10,7 +10,7 @@ pipelines:
         configuration:
           mvnCommand: clean install
           sourceLocation: .
-          configFileLocation: build
+          configFileLocation: ./build
           configFileName: maven-config
           failOnScan: true
           autoPublishBuildInfo: false
