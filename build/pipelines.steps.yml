@@ -10,5 +10,6 @@ pipelines:
         execution:
           onExecute:
             - echo $MY_MESSAGE
+            - env
             - echo "Running $pipeline_name | $step_name on node ID $step_node_id"
             - sleep 6000
