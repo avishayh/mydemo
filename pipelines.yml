@@ -1,8 +1,18 @@
+resources:
+  - name: app_gitRepo
+    type: GitRepo
+    configuration:
+      path: avishayh/mydemo
+      gitProvider: mydemogit
+
 pipelines:
   - name: my_first_pipeline
     steps:
       - name: p1_s1
         type: Bash
+        configuration:
+          inputResources:
+            - name: app_gitRepo    
         execution:
           onExecute:
             # Data from input resources is available as env variables in the step
