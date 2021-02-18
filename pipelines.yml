@@ -4,6 +4,25 @@ resources:
     configuration:
       path: avishayh/mydemo
       gitProvider: mydemogit
+  - name:       firstOutputResource
+    type:       FileSpec
+    configuration:     
+      sourceArtifactory:    artifactoryIntegration
+      # pattern:               # required, either this or aql
+      pattern: "example-repo-local/*.txt"
+      # aql:                  <string>   # required, either this or pattern
+      # target:                  # required to upload files
+      # props:                <string>   # optional
+      # recursive:            <boolean>  # optional
+      # flat:                 <boolean>  # optional
+      # excludePatterns:      <string>   # optional
+      # archiveEntries:       <string>   # optional
+      # buildName:            <string>   # optional
+      # buildNumber:          <integer>  # optional
+      # sortBy:               <string>   # optional
+      # sortOrder:            <string>   # optional
+      # limit:                <integer>  # optional
+      # offset:               <integer>  # optional
 
 pipelines:
   - name: my_first_pipeline
