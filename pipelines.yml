@@ -23,6 +23,12 @@ resources:
       # sortOrder:            <string>   # optional
       # limit:                <integer>  # optional
       # offset:               <integer>  # optional
+  - name: my_build_info
+    type: BuildInfo
+    configuration:
+      sourceArtifactory: artifactoryIntegration
+      buildName: undefined
+      buildNumber: -1
 
 pipelines:
   - name: my_first_pipeline
@@ -31,7 +37,9 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: app_gitRepo    
+            - name: app_gitRepo 
+          outputResources:
+            - name: my_build_info    
         execution:
           onExecute:
             # Data from input resources is available as env variables in the step
