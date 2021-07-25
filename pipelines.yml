@@ -7,7 +7,7 @@ resources:
   - name:       firstOutputResource
     type:       FileSpec
     configuration:     
-      sourceArtifactory:    artifactoryIntegration
+      sourceArtifactory:    artifactory
       # pattern:               # required, either this or aql
       pattern: "example-repo-local/*.txt"
       # aql:                  <string>   # required, either this or pattern
@@ -26,7 +26,7 @@ resources:
   - name: my_build_info
     type: BuildInfo
     configuration:
-      sourceArtifactory: artifactoryIntegration
+      sourceArtifactory: artifactory
       buildName: undefined
       buildNumber: -1
 
