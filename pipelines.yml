@@ -65,7 +65,7 @@ pipelines:
       - name: p1_s3_timedout
         type: Bash
         configuration:
-          timeoutSeconds: 10 //10 seconds
+          timeoutSeconds: 10
         execution:
           onExecute:
             - echo going to sleep - will timeout shortly
